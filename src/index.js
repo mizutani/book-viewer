@@ -1,15 +1,15 @@
 import React from 'react';
-import { render } from 'react-dom';
-// import { createStore } from 'redux';
-// import { Provider } from 'react-redux';
-import BookViewerContainer from './containers/BookViewerContainer';
-// import reducer from './reducers';
-//
-// const store = createStore(reducer);
+import { render } from 'react-dom'
+import { Provider } from 'react-redux';
+import App from './containers/app';
+// import docReady from 'doc-ready';
+import configureStore from './store/configureStore';
+
+const store = configureStore();
 
 render(
-  // <Provider store={store}>
-  <BookViewerContainer />,
-  // </Provider>,
-  document.getElementById('contents'),
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('contents')
 );

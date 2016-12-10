@@ -8,7 +8,7 @@ const Screen = ({ path }) => (
 );
 
 Screen.propTypes = {
-  path: PropTypes.String,
+  path: PropTypes.string,
 };
 
 export default Screen;
