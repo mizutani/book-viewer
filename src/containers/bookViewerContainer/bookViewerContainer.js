@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import Screen from '../components/screen';
+import Screen from 'components/screen/screen';
+import RaisedButton from 'material-ui/RaisedButton'
 
 const src = '/img/sample.jpg';
 
@@ -10,9 +11,9 @@ class BookViewerContainer extends Component {
     return (
       <div>
         <Screen path={src} />
-        <button onClick={() => actions.prevButtonClick()} >PREV</button>
+        <RaisedButton onClick={() => actions.prevButtonClick()} >PREV</RaisedButton>
         <span>{viewer.currentPageNum}</span>
-        <button onClick={() => actions.nextButtonClick()} >NEXT</button>
+        <RaisedButton onClick={() => actions.nextButtonClick()} >NEXT</RaisedButton>
       </div>
     );
   }
@@ -20,7 +21,6 @@ class BookViewerContainer extends Component {
 
 BookViewerContainer.propTypes = {
   viewer: PropTypes.object,
-  path: PropTypes.string,
   actions: PropTypes.object,
 };
 

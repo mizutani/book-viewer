@@ -7,17 +7,20 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV='development' webpack --watch -d & browser-sync start --config bs-config.js",
-    "storybook": "start-storybook -p 6006 -s ./public",
+    "storybook": "NODE_ENV='development' start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook",
     "build:watch": "webpack --progress --colors --watch",
     "lint:fix": "eslint src/** --fix"
   },
   "dependencies": {
+    "autoprefixer": "^6.5.3",
     "doc-ready": "^1.0.4",
     "material-ui": "^0.16.5",
+    "precss": "^1.4.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
+    "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0"
   },
   "devDependencies": {
@@ -38,9 +41,14 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "getstorybook": "^1.6.1",
     "raw-loader": "^0.5.1",
+    "react-storybook": "^1.0.0",
+    "stack-source-map": "^1.0.6",
+    "storybook-addon-material-ui": "^0.7.4",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.13.2",
     "webpack-init": "^0.1.2"
   }
 }

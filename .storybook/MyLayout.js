@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const MyLayout = (props) => (
   <div>
     {props.children}

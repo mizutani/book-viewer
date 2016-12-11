@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions';
-import BookViewerContainer from './BookViewerContainer';
+import { BookViewerContainer } from './bookViewer/bookViewer';
 
 const mapState = state => ({
   viewer: state.viewer,
