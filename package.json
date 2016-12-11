@@ -20,8 +20,10 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
+    "react-slick": "^0.14.5",
     "react-tap-event-plugin": "^2.0.1",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
@@ -35,6 +37,8 @@
     "css-loader": "^0.26.1",
     "eslint": "^3.12.0",
     "eslint-config-airbnb": "^13.0.0",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-friendly-formatter": "^2.0.6",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "2.2.3",
     "eslint-plugin-react": "^6.8.0",

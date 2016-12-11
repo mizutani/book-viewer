@@ -4,10 +4,9 @@ import BookViewerContainer from './bookViewerContainer';
 
 storiesOf('BookViewerContainer', module)
   .add('render', () => {
-
     const state = {
-      currentPageNum: 0,
-    }
+      currentPageNum: 1,
+    };
 
     return getBookViewerContainer(state);
   });
@@ -15,7 +14,7 @@ storiesOf('BookViewerContainer', module)
 const getBookViewerContainer = viewer => {
   const actions = {
     nextButtonClick: action('nextButtonClick'),
-    prevButtonClick: action('prevButtonClick')
+    prevButtonClick: action('prevButtonClick'),
   };
 
   return (
@@ -23,4 +22,4 @@ const getBookViewerContainer = viewer => {
       <BookViewerContainer viewer={viewer} actions={actions} />
     </div>
   );
-}
+};

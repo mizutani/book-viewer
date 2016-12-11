@@ -14,19 +14,25 @@ const calPageNum = (currentPageNum, num) => {
 };
 
 const viewer = (state = initialAppState, action) => {
-  if (action.type === actionTypes.NEXT_BUTTON_CLICK) {
-    return {
-      ...state,
-      currentPageNum: calPageNum(state.currentPageNum, 1),
-    };
-  } else if (action.type === actionTypes.PREV_BUTTON_CLICK) {
-    return {
-      ...state,
-      currentPageNum: calPageNum(state.currentPageNum, -1),
-    };
+  switch (action.type) {
+    case actionTypes.NEXT_BUTTON_CLICK:
+      return {
+        ...state,
+        currentPageNum: calPageNum(state.currentPageNum, 1),
+      };
+    case actionTypes.PREV_BUTTON_CLICK:
+      return {
+        ...state,
+        currentPageNum: calPageNum(state.currentPageNum, -1),
+      };
+    case actionTypes.ON_CHANGE_CURRENT:
+      return {
+        ...state,
+        currentPageNum: action.currentPageNum,
+      };
+    default:
+      return state;
   }
-
-  return state;
 };
 
 export default viewer;
