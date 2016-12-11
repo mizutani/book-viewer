@@ -1,4 +1,4 @@
-import * as actionTypes from '../utils/actionTypes';
+import * as actionTypes from 'utils/actionTypes';
 
 export const nextButtonClick = () => ({
   type: actionTypes.NEXT_BUTTON_CLICK,
