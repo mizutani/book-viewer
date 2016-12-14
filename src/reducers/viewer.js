@@ -2,6 +2,13 @@ import * as actionTypes from 'utils/actionTypes';
 
 const initialAppState = {
   currentPageNum: 0,
+  open: true,
+  items: [
+    {
+      id: 1,
+      file: '/img/sample.jpg',
+    }
+  ]
 };
 
 const calPageNum = (currentPageNum, num) => {
@@ -29,7 +36,13 @@ const viewer = (state = initialAppState, action) => {
       return {
         ...state,
         currentPageNum: action.currentPageNum,
+        open: false,
       };
+    case actionTypes.ON_CHANGE_MINI_MAP:
+      return {
+        ...state,
+        open: action.open,
+      }
     default:
       return state;
   }

@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Screen from 'components/screen/screen';
 import RaisedButton from 'material-ui/RaisedButton';
+import styles from './bookViewerContainer.css';
 
 const src = '/img/sample.jpg';
 
@@ -9,7 +10,7 @@ class BookViewerContainer extends Component {
     const { viewer, actions } = this.props;
 
     return (
-      <div>
+      <div className={styles.bookViewerContainer}>
         <Screen path={src} actions={actions} currentNum={viewer.currentPageNum} />
         <RaisedButton onClick={() => actions.prevButtonClick()} >PREV</RaisedButton>
         <span>{viewer.currentPageNum}</span>
