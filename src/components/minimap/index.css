@@ -1,0 +1,9 @@
+:local .minimap {
+  text-align: center;
+}
+:local .image {
+  width: 90%;
+}
+:local .image:hover {
+  box-shadow: 4px 4px grey;
+}

@@ -15,6 +15,7 @@
   "dependencies": {
     "autoprefixer": "^6.5.3",
     "doc-ready": "^1.0.4",
+    "lodash": "^4.17.2",
     "material-ui": "^0.16.5",
     "precss": "^1.4.0",
     "react": "^15.4.1",

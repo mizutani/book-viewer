@@ -10,3 +10,7 @@ export const onChangeCurrent = (currentPageNum) => ({
   type: actionTypes.ON_CHANGE_CURRENT,
   currentPageNum: currentPageNum,
 });
+export const onChangeMiniMap = (open) => ({
+  type: actionTypes.ON_CHANGE_MINI_MAP,
+  open: open,
+});
