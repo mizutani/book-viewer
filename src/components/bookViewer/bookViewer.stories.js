@@ -1,17 +1,17 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import BookViewerContainer from './bookViewerContainer';
+import BookViewer from './bookViewer';
 
-storiesOf('BookViewerContainer', module)
+storiesOf('BookViewer', module)
   .add('render', () => {
     const state = {
       currentPageNum: 1,
     };
 
-    return getBookViewerContainer(state);
+    return getBookViewer(state);
   });
 
-const getBookViewerContainer = viewer => {
+const getBookViewer = viewer => {
   const actions = {
     nextButtonClick: action('nextButtonClick'),
     prevButtonClick: action('prevButtonClick'),
@@ -19,7 +19,7 @@ const getBookViewerContainer = viewer => {
 
   return (
     <div>
-      <BookViewerContainer viewer={viewer} actions={actions} />
+      <BookViewer viewer={viewer} actions={actions} />
     </div>
   );
 };

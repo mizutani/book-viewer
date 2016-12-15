@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
-import BookViewerContainer from './bookViewerContainer';
+import bookViewer from './bookViewer';
 
 const mapStateToProps = state => ({
   viewer: state.viewer,
@@ -13,4 +13,4 @@ function mapDispatch(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatch)(BookViewerContainer);
+export default connect(mapStateToProps, mapDispatch)(bookViewer);

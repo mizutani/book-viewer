@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import BookViewerContainer from 'components/bookViewerContainer';
+import bookViewer from 'components/bookViewer';
 import MiniMap from 'components/minimap';
 import * as actions from 'actions';
 
@@ -9,7 +9,7 @@ const App = (props) => {
   return (
     <div>
       <MiniMap />
-      <BookViewerContainer />
+      <bookViewer />
       <button
         onClick={() => {props.actions.onChangeMiniMap(!props.open)} }>
         minimap

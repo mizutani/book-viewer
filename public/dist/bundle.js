@@ -23914,9 +23914,9 @@
 	
 	var _redux = __webpack_require__(/*! redux */ 186);
 	
-	var _bookViewerContainer = __webpack_require__(/*! components/bookViewerContainer */ 676);
+	var _bookViewer = __webpack_require__(/*! components/bookViewer */ 676);
 	
-	var _bookViewerContainer2 = _interopRequireDefault(_bookViewerContainer);
+	var _bookViewer2 = _interopRequireDefault(_bookViewer);
 	
 	var _minimap = __webpack_require__(/*! components/minimap */ 460);
 	
@@ -23935,7 +23935,7 @@
 	    'div',
 	    null,
 	    _react2.default.createElement(_minimap2.default, null),
-	    _react2.default.createElement(_bookViewerContainer2.default, null),
+	    _react2.default.createElement(_bookViewer2.default, null),
 	    _react2.default.createElement(
 	      'button',
 	      {
@@ -51318,7 +51318,7 @@
 /* 675 */,
 /* 676 */
 /*!*****************************************************!*\
-  !*** ./src/components/bookViewerContainer/index.js ***!
+  !*** ./src/components/bookViewer/index.js ***!
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -51336,9 +51336,9 @@
 	
 	var actions = _interopRequireWildcard(_actions);
 	
-	var _bookViewerContainer = __webpack_require__(/*! ./bookViewerContainer */ 677);
+	var _bookViewer = __webpack_require__(/*! ./bookViewer */ 677);
 	
-	var _bookViewerContainer2 = _interopRequireDefault(_bookViewerContainer);
+	var _bookViewer2 = _interopRequireDefault(_bookViewer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -51356,12 +51356,12 @@
 	  };
 	}
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatch)(_bookViewerContainer2.default);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatch)(_bookViewer2.default);
 
 /***/ },
 /* 677 */
 /*!*******************************************************************!*\
-  !*** ./src/components/bookViewerContainer/bookViewerContainer.js ***!
+  !*** ./src/components/bookViewer/bookViewer.js ***!
   \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -51385,9 +51385,9 @@
 	
 	var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
 	
-	var _bookViewerContainer = __webpack_require__(/*! ./bookViewerContainer.css */ 678);
+	var _bookViewer = __webpack_require__(/*! ./bookViewer.css */ 678);
 	
-	var _bookViewerContainer2 = _interopRequireDefault(_bookViewerContainer);
+	var _bookViewer2 = _interopRequireDefault(_bookViewer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -51399,16 +51399,16 @@
 	
 	var src = '/img/sample.jpg';
 	
-	var BookViewerContainer = function (_Component) {
-	  _inherits(BookViewerContainer, _Component);
+	var bookViewer = function (_Component) {
+	  _inherits(bookViewer, _Component);
 	
-	  function BookViewerContainer() {
-	    _classCallCheck(this, BookViewerContainer);
+	  function bookViewer() {
+	    _classCallCheck(this, bookViewer);
 	
-	    return _possibleConstructorReturn(this, (BookViewerContainer.__proto__ || Object.getPrototypeOf(BookViewerContainer)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (bookViewer.__proto__ || Object.getPrototypeOf(bookViewer)).apply(this, arguments));
 	  }
 	
-	  _createClass(BookViewerContainer, [{
+	  _createClass(bookViewer, [{
 	    key: 'render',
 	    value: function render() {
 	      var _props = this.props,
@@ -51418,7 +51418,7 @@
 	
 	      return _react2.default.createElement(
 	        'div',
-	        { className: _bookViewerContainer2.default.bookViewerContainer },
+	        { className: _bookViewer2.default.bookViewer },
 	        _react2.default.createElement(_screen2.default, { path: src, actions: actions, currentNum: viewer.currentPageNum }),
 	        _react2.default.createElement(
 	          _RaisedButton2.default,
@@ -51443,27 +51443,27 @@
 	    }
 	  }]);
 	
-	  return BookViewerContainer;
+	  return bookViewer;
 	}(_react.Component);
 	
-	BookViewerContainer.propTypes = {
+	bookViewer.propTypes = {
 	  viewer: _react.PropTypes.object,
 	  actions: _react.PropTypes.object
 	};
 	
-	exports.default = BookViewerContainer;
+	exports.default = bookViewer;
 
 /***/ },
 /* 678 */
 /*!********************************************************************!*\
-  !*** ./src/components/bookViewerContainer/bookViewerContainer.css ***!
+  !*** ./src/components/bookViewer/bookViewer.css ***!
   \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../../../~/css-loader?{"modules":true,"localIdentName":"[path][name]__[local]___[hash:base64:5]"}!./bookViewerContainer.css */ 679);
+	var content = __webpack_require__(/*! !./../../../~/css-loader?{"modules":true,"localIdentName":"[path][name]__[local]___[hash:base64:5]"}!./bookViewer.css */ 679);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ./../../../~/style-loader/addStyles.js */ 395)(content, {});
@@ -51472,8 +51472,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?{\"modules\":true,\"localIdentName\":\"[path][name]__[local]___[hash:base64:5]\"}!./bookViewerContainer.css", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?{\"modules\":true,\"localIdentName\":\"[path][name]__[local]___[hash:base64:5]\"}!./bookViewerContainer.css");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?{\"modules\":true,\"localIdentName\":\"[path][name]__[local]___[hash:base64:5]\"}!./bookViewer.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?{\"modules\":true,\"localIdentName\":\"[path][name]__[local]___[hash:base64:5]\"}!./bookViewer.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -51485,7 +51485,7 @@
 /***/ },
 /* 679 */
 /*!***************************************************************************************************************************************************************!*\
-  !*** ./~/css-loader?{"modules":true,"localIdentName":"[path][name]__[local]___[hash:base64:5]"}!./src/components/bookViewerContainer/bookViewerContainer.css ***!
+  !*** ./~/css-loader?{"modules":true,"localIdentName":"[path][name]__[local]___[hash:base64:5]"}!./src/components/bookViewer/bookViewer.css ***!
   \***************************************************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -51494,11 +51494,11 @@
 	
 	
 	// module
-	exports.push([module.id, ".src-components-bookViewerContainer-bookViewerContainer__bookViewerContainer___3YuC0 {\n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, ".src-components-bookViewer-bookViewer__bookViewer___3YuC0 {\n  text-align: center;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
-		"bookViewerContainer": "src-components-bookViewerContainer-bookViewerContainer__bookViewerContainer___3YuC0"
+		"bookViewer": "src-components-bookViewer-bookViewer__bookViewer___3YuC0"
 	};
 
 /***/ }
