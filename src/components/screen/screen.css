@@ -1,4 +1,11 @@
 :local .screen {
-  max-width: 200px;
+  margin-bottom: 10px;
+}
+:local .card {
+  padding: 10px;
+}
+:local .slider {
+  width: 90%;
   overflow: hidden;
+  margin: auto;
 }

@@ -21,10 +21,10 @@ const sliderSettings = (currentNum, actions) => ({
 
 const Screen = ({ path, currentNum, actions }) => (
   <div className={styles.screen} >
-    <Card>
+    <Card className={styles.card} >
       <CardTitle title="画像タイトル" subtitle="画像サブタイトル" />
       <CardMedia>
-        <Slider {...sliderSettings(currentNum, actions)}>
+        <Slider {...sliderSettings(currentNum, actions)} className={styles.slider}>
           <Image src={path} />
           <Image src={path} />
           <Image src={path} />

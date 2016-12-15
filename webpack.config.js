@@ -10,7 +10,6 @@ module.exports = {
   eslint: {
     configFile: './.eslintrc.json',
     fix: true,
-    formatter: require('eslint-formatter-pretty')
   },
   resolve: {
     extensions: [

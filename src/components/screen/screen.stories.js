@@ -16,7 +16,7 @@ const getScreen = src => {
 
   return (
     <div>
-      <Screen path={src} pageNum={2} actions={actions} />
+      <Screen path={src} currentNum={2} actions={actions} />
     </div>
   );
 };

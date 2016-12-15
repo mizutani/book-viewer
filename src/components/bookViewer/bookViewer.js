@@ -12,9 +12,11 @@ class bookViewer extends Component {
     return (
       <div className={styles.bookViewer}>
         <Screen path={src} actions={actions} currentNum={viewer.currentPageNum} />
-        <RaisedButton onClick={() => actions.prevButtonClick()} >PREV</RaisedButton>
-        <span>{viewer.currentPageNum}</span>
-        <RaisedButton onClick={() => actions.nextButtonClick()} >NEXT</RaisedButton>
+        <div className={styles.viewController}>
+          <RaisedButton onClick={() => actions.prevButtonClick()} >PREV</RaisedButton>
+          <span>{viewer.currentPageNum}</span>
+          <RaisedButton onClick={() => actions.nextButtonClick()} >NEXT</RaisedButton>
+        </div>
       </div>
     );
   }
