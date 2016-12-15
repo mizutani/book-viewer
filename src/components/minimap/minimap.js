@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import lodash from 'lodash/collection';
 import Drawer from 'material-ui/Drawer';
 import Image from 'lib_modules/index';
 import styles from './index.css';
 
 const createImages = (items, actions) => {
   return (
-    lodash.map(items, (item) => (
-        <Image src={item.file} className={styles.image} onClick={()=>(actions.onChangeCurrent(item.id))} />
+    items.map((item, index) => (
+        <Image key={index} src={item.file} className={styles.image} onClick={()=>(actions.onChangeCurrent(item.id))} />
     )
   )
 );
