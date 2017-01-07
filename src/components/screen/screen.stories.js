@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import Screen from './screen';
 
-const src = '/img/sample.jpg';
+const src = '/img/sample/1.png';
 
 storiesOf('Screen', module)
   .add('success', () => (

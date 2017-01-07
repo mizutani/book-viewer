@@ -41,6 +41,12 @@ module.exports = {
       }, {
         test: /\.(jpg|png)$/,
         loaders: 'url-loader'
+      }, {
+        test: /\.(jpg|png|gif)$/,
+        loder: 'file-loader',
+        query: {
+          name: 'images/[name].[ext]',
+        }
       }
     ]
   },

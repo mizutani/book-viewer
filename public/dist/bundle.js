@@ -24108,7 +24108,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var src = '/img/sample.jpg';
+	var src = '/img/sample/1.png';
 	
 	var bookViewer = function (_Component) {
 	  _inherits(bookViewer, _Component);
@@ -38147,7 +38147,7 @@
 	  open: true,
 	  items: [{
 	    id: 1,
-	    file: '/img/sample.jpg'
+	    file: '/img/sample/1.png'
 	  }]
 	};
 	

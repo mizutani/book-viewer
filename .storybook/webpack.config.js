@@ -34,8 +34,12 @@ module.exports = {
                 localIdentName: '[path][name]__[local]___[hash:base64:5]'
             }
         }, {
-            test: /\.(jpg|png)$/,
-            loader: 'url-loader'
-        }],
+          test: /\.(jpg|png|gif)$/,
+          loader: 'file-loader',
+          query: {
+            name: 'images/[name].[ext]',
+          }
+        },
+      ]
     },
 };

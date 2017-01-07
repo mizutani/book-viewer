@@ -3,7 +3,7 @@ import Screen from 'components/screen/screen';
 import RaisedButton from 'material-ui/RaisedButton';
 import styles from './bookViewer.css';
 
-const src = '/img/sample.jpg';
+const src = '/img/sample/1.png';
 
 class bookViewer extends Component {
   render() {

@@ -6,7 +6,7 @@ const initialAppState = {
   items: [
     {
       id: 1,
-      file: '/img/sample.jpg',
+      file: '/img/sample/1.png',
     }
   ]
 };

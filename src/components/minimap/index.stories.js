@@ -1,23 +1,34 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import MiniMap from './minimap';
+// import * as images from '/assets/files';
+// import glob from 'glob';
+
+// glob("/assets/files/*.png", function(err, files) {
+//     if(err) {
+//       console.log(err)
+//     }
+//     console.log(pattern)
+//     console.log(files)
+//   }
+// );
 
 const items = [
   {
     id: 1,
-    file: '/img/sample.jpg',
+    file: '/img/sample/1.png',
   },
   {
     id: 2,
-    file: '/img/sample.jpg',
+    file: '/img/sample/2.png',
   },
   {
     id: 3,
-    file: '/img/sample.jpg',
+    file: '/img/sample/3.png',
   },
   {
     id: 4,
-    file: '/img/sample.jpg',
+    file: '/img/sample/4.png',
   },
 ];
 
