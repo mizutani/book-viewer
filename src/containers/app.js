@@ -21,6 +21,7 @@ const App = (props) => {
 App.propTypes = {
   actions: PropTypes.object,
   open: PropTypes.bool,
+  items: PropTypes.array
 }
 
 const mapStateToProps = state => ({

@@ -7,6 +7,18 @@ const initialAppState = {
     {
       id: 1,
       file: '/img/sample/1.png',
+    },
+    {
+      id: 2,
+      file: '/img/sample/2.png',
+    },
+    {
+      id: 3,
+      file: '/img/sample/3.png',
+    },
+    {
+      id: 4,
+      file: '/img/sample/4.png',
     }
   ]
 };

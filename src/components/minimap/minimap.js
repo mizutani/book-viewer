@@ -6,7 +6,7 @@ import styles from './index.css';
 const createImages = (items, actions) => {
   return (
     items.map((item, index) => (
-        <Image key={index} src={item.file} className={styles.image} onClick={()=>(actions.onChangeCurrent(item.id))} />
+        <Image key={index} src={item.file} className={styles.image} onClick={()=>(actions.onChangeCurrent(index))} />
     )
   )
 );

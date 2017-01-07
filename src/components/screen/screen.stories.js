@@ -2,21 +2,30 @@ import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import Screen from './screen';
 
-const src = '/img/sample/1.png';
+const images = [
+  {
+    id: 1,
+    file: '/img/sample/1.png',
+  },
+  {
+    id: 2,
+    file: '/img/sample/2.png',
+  }
+];
 
 storiesOf('Screen', module)
   .add('success', () => (
-    getScreen(src)
+    getScreen(images)
   ));
 
-const getScreen = src => {
+const getScreen = images => {
   const actions = {
     onChangeCurrent: action('onChangeCurrent'),
   };
 
   return (
     <div>
-      <Screen path={src} currentNum={2} actions={actions} />
+      <Screen images={images} currentNum={1} actions={actions} />
     </div>
   );
 };
