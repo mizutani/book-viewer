@@ -14,3 +14,7 @@ export const onChangeMiniMap = (open) => ({
   type: actionTypes.ON_CHANGE_MINI_MAP,
   open: open,
 });
+export const onDropFiles = (files) => ({
+  type: actionTypes.ON_DROP_FILES,
+  files: files,
+});

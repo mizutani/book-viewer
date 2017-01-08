@@ -1,8 +1,9 @@
 import * as actionTypes from 'utils/actionTypes';
+import { createObjectURL } from 'utils/imageHelper';
 
 const initialAppState = {
   currentPageNum: 0,
-  open: true,
+  open: false,
   items: [
     {
       id: 1,
@@ -54,7 +55,18 @@ const viewer = (state = initialAppState, action) => {
       return {
         ...state,
         open: action.open,
-      }
+      };
+    case actionTypes.ON_DROP_FILES:
+      return {
+        ...state,
+        items: [
+          ...state.items,
+          {
+            id: state.items.length + 1,
+            file: createObjectURL(action.files[0])
+          }
+        ]
+      };
     default:
       return state;
   }

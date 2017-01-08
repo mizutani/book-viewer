@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import BookViewer from 'components/bookViewer';
 import MiniMap from 'components/minimap';
+import DropArea from 'components/dropArea';
 import * as actions from 'actions';
 
 const App = (props) => {
@@ -14,6 +15,7 @@ const App = (props) => {
         onClick={() => {props.actions.onChangeMiniMap(!props.open)} }>
         minimap
       </button>
+      <DropArea />
     </div>
   );
 }
