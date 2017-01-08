@@ -1,0 +1,23 @@
+:local .app {
+
+}
+:local .main {
+
+}
+:local .fotter {
+  padding: 50px;
+}
+:local .imageList {
+  float: right;
+  background: gray;
+  border-top: 1px solid #DDD;
+  border-left: 1px solid #DDD;
+  border-right: 1px solid #BBB;
+  border-bottom: 1px solid #BBB;
+  color: #111;
+  width: 100x;
+  padding: 10x 0;
+}
+:local .dropArea {
+  clear: both;
+}

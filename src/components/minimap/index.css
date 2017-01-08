@@ -2,6 +2,7 @@
   text-align: center;
 }
 :local .image {
+  margin: 5px;
   width: 90%;
 }
 :local .image:hover {

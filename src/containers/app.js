@@ -5,17 +5,25 @@ import BookViewer from 'components/bookViewer';
 import MiniMap from 'components/minimap';
 import DropArea from 'components/dropArea';
 import * as actions from 'actions';
+import styles from './app.css';
 
 const App = (props) => {
   return (
-    <div>
+    <div className={styles.app} >
       <MiniMap />
-      <BookViewer />
-      <button
-        onClick={() => {props.actions.onChangeMiniMap(!props.open)} }>
-        minimap
-      </button>
-      <DropArea />
+      <div className={styles.main}>
+        <BookViewer />
+      </div>
+      <div className={styles.fotter}>
+        <button
+          className={styles.imageList}
+          onClick={() => {props.actions.onChangeMiniMap(!props.open)} }>
+          画像一覧
+        </button>
+        <div className={styles.dropArea}>
+          <DropArea />
+        </div>
+      </div>
     </div>
   );
 }

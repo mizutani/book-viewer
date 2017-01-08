@@ -7,8 +7,8 @@ class dropArea extends Component {
     const { actions } = this.props;
 
     return (
-      <div className={styles.dropZone}>
-        <Dropzone onDrop={ (files) => actions.unzip(files) }>
+      <div>
+        <Dropzone onDrop={ (files) => actions.unzip(files) } className={styles.dropZone}>
           ファイルドロップエリア
         </Dropzone>
       </div>
