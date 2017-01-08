@@ -3,3 +3,4 @@ export const PREV_BUTTON_CLICK = 'PREV_BUTTON_CLICK';
 export const ON_CHANGE_CURRENT = 'ON_CHANGE_CURRENT';
 export const ON_CHANGE_MINI_MAP = 'ON_CHANGE_MINI_MAP';
 export const ON_DROP_FILES = 'ON_DROP_FILES';
+export const UNZIP = 'UNZIP';

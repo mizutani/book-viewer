@@ -1,7 +1,8 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
 
-module.exports = {
+var config = {
   entry: [path.join(__dirname, 'src', 'index.js')],
   output: {
     path: path.join(__dirname, 'public', 'dist'),
@@ -39,10 +40,10 @@ module.exports = {
           localIdentName: '[path][name]__[local]___[hash:base64:5]'
         }
       }, {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|zip)$/,
         loaders: 'url-loader'
       }, {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(jpg|png|gif|zip)$/,
         loder: 'file-loader',
         query: {
           name: 'images/[name].[ext]',
@@ -54,3 +55,10 @@ module.exports = {
     return [autoprefixer];
   }
 };
+
+// config.plugins.push(new webpack.ProvidePlugin({
+//   'JSZip': 'jszip',
+//   'window.JSZip': 'jszip' // this doesn't expose JSZip property for window, but exposes it to every module
+// }));
+
+module.exports = config;

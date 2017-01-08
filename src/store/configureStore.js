@@ -1,19 +1,19 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import rootReducer from 'reducers';
+import rootSaga from 'sagas';
 
 export default function configureStore(initialState) {
+  const sagaMiddleware = createSagaMiddleware();
   const store = createStore(
     rootReducer,
-    initialState
+    initialState,
+    applyMiddleware(
+      sagaMiddleware
+    )
   );
 
-  // if (module.hot) {
-  //   // Enable Webpack hot module replacement for reducers
-  //   module.hot.accept('../reducers', () => {
-  //     const nextReducer = require('../reducers')
-  //     store.replaceReducer(nextReducer)
-  //   })
-  // }
-  //
+  sagaMiddleware.run(rootSaga);
+
   return store;
 }

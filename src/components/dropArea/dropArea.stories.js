@@ -4,7 +4,6 @@ import DropArea from './dropArea';
 
 storiesOf('DropArea', module)
   .add('render', () => {
-
     return getDropArea();
   });
 

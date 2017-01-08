@@ -1,3 +1,4 @@
+// import { createAction } from "redux-actions";
 import * as actionTypes from 'utils/actionTypes';
 
 export const nextButtonClick = () => ({
@@ -16,5 +17,10 @@ export const onChangeMiniMap = (open) => ({
 });
 export const onDropFiles = (files) => ({
   type: actionTypes.ON_DROP_FILES,
-  files: files,
+  files: files
+});
+
+export const unzip = (files) => ({
+  type: actionTypes.UNZIP,
+  files: files
 });

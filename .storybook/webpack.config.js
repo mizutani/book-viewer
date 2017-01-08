@@ -6,8 +6,9 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path')
+const webpack = require('webpack')
 
-module.exports = {
+var config = {
     plugins: [
         // your custom plugins
     ],
@@ -34,7 +35,7 @@ module.exports = {
                 localIdentName: '[path][name]__[local]___[hash:base64:5]'
             }
         }, {
-          test: /\.(jpg|png|gif)$/,
+          test: /\.(jpg|png|gif|zip)$/,
           loader: 'file-loader',
           query: {
             name: 'images/[name].[ext]',
@@ -43,3 +44,10 @@ module.exports = {
       ]
     },
 };
+
+config.plugins.push(new webpack.ProvidePlugin({
+  'JSZip': 'jszip',
+  'window.JSZip': 'jszip' // this doesn't expose JSZip property for window, but exposes it to every module
+}));
+
+module.exports = config;

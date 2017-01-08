@@ -8,18 +8,6 @@ const initialAppState = {
     {
       id: 1,
       file: '/img/sample/1.png',
-    },
-    {
-      id: 2,
-      file: '/img/sample/2.png',
-    },
-    {
-      id: 3,
-      file: '/img/sample/3.png',
-    },
-    {
-      id: 4,
-      file: '/img/sample/4.png',
     }
   ]
 };
@@ -57,14 +45,15 @@ const viewer = (state = initialAppState, action) => {
         open: action.open,
       };
     case actionTypes.ON_DROP_FILES:
+      const imtes = action.files.map((file, index) => ({
+        id: state.items.length + 1 + index,
+        file: createObjectURL(file)
+      }));
       return {
         ...state,
         items: [
           ...state.items,
-          {
-            id: state.items.length + 1,
-            file: createObjectURL(action.files[0])
-          }
+          ...imtes
         ]
       };
     default:
