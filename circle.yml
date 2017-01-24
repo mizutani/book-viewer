@@ -1,0 +1,10 @@
+machine:
+  node:
+    version: 7.4.0
+dependencies:
+  override:
+    - npm install -g yarn
+    - yarn install -D
+test:
+  post:
+    - yarn run eslint ./src
