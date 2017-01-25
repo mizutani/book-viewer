@@ -1,14 +1,14 @@
 storybook:
-  build: .
-  volumes:
-    - .:/home/app/book-viewer
+  extends:
+    file: docker-compose-common.yml
+    service: webapp
   command: yarn run storybook
   ports:
     - "6006:6006"
 browser-sync:
-  build: .
-  volumes:
-    - .:/home/app/book-viewer
+  extends:
+    file: docker-compose-common.yml
+    service: webapp
   command: yarn run start
   ports:
     - "3000:3000"
