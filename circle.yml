@@ -8,4 +8,4 @@ dependencies:
     - yarn install -D
 test:
   override:
-    - yarn run eslint ./src
+    - yarn  run eslint ./src
