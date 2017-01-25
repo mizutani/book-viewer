@@ -3,6 +3,7 @@ import { call, put, takeEvery } from 'redux-saga/effects'
 import * as actionTypes from 'utils/actionTypes';
 import JSZip from 'jszip';
 import path from 'path';
+import { Promise } from 'es6-promise';
 
 const rejectPtn = /.*__MACOSX.*/;
 const supportExtPtn = /^\.(jpg|jpeg|png|gif)$/;
@@ -36,7 +37,7 @@ function* handleUnzip(action) {
 
     yield put({type: actionTypes.ON_DROP_FILES, files: unzipFiles});
   } catch (e) {
-    console.log(e);
+    // console.log(e);
   }
 }
 

@@ -44,7 +44,7 @@ const viewer = (state = initialAppState, action) => {
         ...state,
         open: action.open,
       };
-    case actionTypes.ON_DROP_FILES:
+    case actionTypes.ON_DROP_FILES: {
       const imtes = action.files.map((file, index) => ({
         id: state.items.length + 1 + index,
         file: createObjectURL(file)
@@ -56,6 +56,7 @@ const viewer = (state = initialAppState, action) => {
           ...imtes
         ]
       };
+    }
     default:
       return state;
   }
