@@ -2,9 +2,10 @@ machine:
   node:
     version: 7.4.0
 dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
   override:
-    - npm install -g yarn
     - yarn install -D
 test:
-  post:
+  override:
     - yarn run eslint ./src
