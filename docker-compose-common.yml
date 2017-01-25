@@ -1,0 +1,4 @@
+webapp:
+  build: .
+  volumes:
+    - .:/home/app/book-viewer
